@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Sky Coffee</title>
+  <link href="css/destyle.css" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- header -->
+  <div id="header"></div>
+  <template id="headerTemplate">
+    <header class="header">
+      <h1 class="logo"> <a href="#"><img src="images/logo/logo.png" alt="SKY COFFEE"></a></h1>
+    </header>
+  </template>
+  <!-- /header -->
+
+  <!-- main-visual -->
+  <div id="mainVisual"></div>
+  <template id="mainVisualTemplate">
+    <div class="main-visual">
+      <picture>
+        <source media="(min-width: 768px)" srcset="images/pc_main-visual.jpg">
+        <img src="images/sp_main-visual.jpg" alt="複数の青いカップのコーヒー">
+      </picture>
+    </div>
+  </template>
+  <!-- /main-visual -->
+
+  <!-- global-nav -->
+  <div id="globalNav"></div>
+  <template id="globalNavTemplate">
+  <nav class="global-nav">
+    <ul>
+      <li><a href="#">menu</a></li>
+      <li><a href="#">blog</a></li>
+      <li><a href="#">access</a></li>
+    </ul>
+  </nav>
+</template>
+  <!-- /global-nav -->
+
+  <main class="content">
+
+    <!-- concept -->
+    <div id="concept"></div>
+    <template id="conceptTemplate">
+    <section class="concept">
+      <div class="container">
+        <div class="img">
+          <img src="images/concept.jpg" alt="青いカップのコーヒー" width="750" height="759">
+        </div>
+        <div class="desc">
+          <div class="subtitle">Concept</div>
+          <h2 class="title">心静かにコーヒーを</h2>
+          <div class="text">
+            <p>
+              立ち止まって、<br>
+              空の青さを眺めて、<br>
+              一息つきましょう。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    </template>
+    <!-- /concept -->
+
+    <!-- blog -->
+    <div id="blog"></div>
+    <template id="blogTemplate">
+    <section class="blog">
+      <div class="container">
+        <h2 class="heading">blog<span class="subtitle">ブログ</span></h2>
+        <div class="list">
+          <div class="item">
+            <a href="#">
+              <div class="img"><img src="images/thumbnail01.jpg" alt="青いトラック" width="700" height="357" /></div>
+              <div class="title">コーヒーカー始めました。</div>
+              <div class="date">2030.08.08</div>
+            </a>
+          </div>
+          <div class="item">
+            <a href="#">
+              <div class="img"><img src="images/thumbnail02.jpg" alt="牛乳" width="700" height="357" /></div>
+              <div class="title">濃厚クリーミーなミルクをどうぞ</div>
+              <div class="date">2030.08.05</div>
+            </a>
+          </div>
+          <div class="item">
+            <a href="#">
+              <div class="img"><img src="images/thumbnail03.jpg" alt="音楽アプリ" width="700" height="357" /></div>
+              <div class="title">Sky Coffeeのオリジナル曲が完成！無料ダウンロード可能です。</div>
+              <div class="date">2030.08.02</div>
+            </a>
+          </div>
+          <div class="item">
+            <a href="#">
+              <div class="img"><img src="images/thumbnail04.jpg" alt="山々" width="700" height="357" /></div>
+              <div class="title">ハイキング用のコーヒーを販売中です。</div>
+              <div class="date">2030.07.28</div>
+            </a>
+          </div>
+          <div class="item">
+            <a href="#">
+              <div class="img"><img src="images/thumbnail05.jpg" alt="青とピンクのグラデーション" width="700" height="357" /></div>
+              <div class="title">ショップの壁を塗ってみました。</div>
+              <div class="date">2030.07.27</div>
+            </a>
+          </div>
+          <div class="item">
+            <a href="#">
+              <div class="img"><img src="images/thumbnail06.jpg" alt="コーヒーと手帳" width="700" height="357" /></div>
+              <div class="title">ブログをはじめました。</div>
+              <div class="date">2030.07.26</div>
+            </a>
+          </div>
+        </div>
+        <a href="#" class="btn">
+          ブログ一覧
+        </a>
+      </div>
+    </section>
+  </template>
+    <!-- /blog -->
+
+  </main>
+
+  <!-- footer -->
+  <div id="footer"></div>
+  <template id="footerTemplate">
+    <footer class="footer">
+      <div class="logo"><a href="#"><img src="images/logo/logo-white.png" alt="SKY COFFEE" width="200" height="40"></a></div>
+      <div class="copyright"><a href="https://webdesigner-go.com/sky-coffee/">&copy;Sky Coffee</a></div>
+      <div class="copyright">参考：<a href="https://webdesigner-go.com/coding-practice/">『無料コーディング練習所』</a></div>
+    </footer>
+  </template>
+  <!-- /footer -->
+<script>
+// header
+const headerContainer = document.getElementById("header");
+const headerTemplate = document.getElementById("headerTemplate").content;
+headerContainer.appendChild(headerTemplate); 
+
+// main-visual
+const mainVisualContainer = document.getElementById("mainVisual");
+const mainVisualTemplate = document.getElementById("mainVisualTemplate").content;
+mainVisualContainer.appendChild(mainVisualTemplate); 
+
+// global-nav
+const globalNavContainer = document.getElementById("globalNav");
+const globalNavTemplate = document.getElementById("globalNavTemplate").content;
+globalNavContainer.appendChild(globalNavTemplate); 
+
+// concept
+const conceptContainer = document.getElementById("concept");
+const conceptTemplate = document.getElementById("conceptTemplate").content;
+conceptContainer.appendChild(conceptTemplate); 
+
+// blog
+const blogContainer = document.getElementById("blog");
+const blogTemplate = document.getElementById("blogTemplate").content;
+blogContainer.appendChild(blogTemplate); 
+
+// footer
+const footerContainer = document.getElementById("footer");
+const footerTemplate = document.getElementById("footerTemplate").content;
+footerContainer.appendChild(footerTemplate); 
+</script>
+</body>
+</html>
